@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am an urban planner and spatial analyst focused on making cities easier to walk, bike, and live in. My day-to-day involves mapping public transit gaps, analyzing pedestrian safety data, and translating dense municipal reports into clear, visual stories for local communities.\n\n\n\nMap of the world, made by: L’Isle, Guillaume de, 1675-1726, cartographer. Available at: http://hdl.loc.gov/loc.gmd/g3200.ct009328"
+  },
+  {
+    "objectID": "about.html#the-work",
+    "href": "about.html#the-work",
+    "title": "About",
+    "section": "",
+    "text": "I am an urban planner and spatial analyst focused on making cities easier to walk, bike, and live in. My day-to-day involves mapping public transit gaps, analyzing pedestrian safety data, and translating dense municipal reports into clear, visual stories for local communities.\n\n\n\nMap of the world, made by: L’Isle, Guillaume de, 1675-1726, cartographer. Available at: http://hdl.loc.gov/loc.gmd/g3200.ct009328"
+  },
+  {
+    "objectID": "about.html#the-side-quest",
+    "href": "about.html#the-side-quest",
+    "title": "About",
+    "section": "The Side Quest",
+    "text": "The Side Quest\nWhen I step away from city maps, I spend most of my weekends restoring vintage mechanical typewriters. The hobby started by accident after I found a jammed 1960s portable model at a local thrift shop and decided to take it apart on my kitchen table.\n\n\n\nRemington typewriter. Clas Ohlson museum in Insjön near Leksand in Dalarna. Available at: https://commons.wikimedia.org/wiki/File:Remington_typewriter.JPG"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Sample notebook analysis\n\n\n\nHere is a demo of how you can include projects with code using Quarto\n\n\n\n\n\n\nNov 16, 2027\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/sample-project/index.html",
+    "href": "projects/sample-project/index.html",
+    "title": "Sample notebook analysis",
+    "section": "",
+    "text": "The Star Wars sample data is distributed by the dplyr project, but the analysis below uses only base R. The CSV is loaded directly from the project’s source; the results describe this selected set of characters, not a random sample of a larger population.\n\nstarwars_url &lt;- paste0(\n  \"https://raw.githubusercontent.com/tidyverse/dplyr/main/\",\n  \"data-raw/starwars.csv\"\n)\nstarwars_data &lt;- read.csv(url(starwars_url), stringsAsFactors = FALSE)\n\n\n\n\nobserved_heights &lt;- starwars_data$height[!is.na(starwars_data$height)]\nhist(\n  observed_heights,\n  breaks = seq(0, ceiling(max(observed_heights) / 10) * 10, by = 10),\n  main = \"Recorded heights of Star Wars characters\",\n  xlab = \"Height (cm)\",\n  ylab = \"Number of characters\",\n  col = \"lightblue\",\n  border = \"white\"\n)\n\n\n\n\n\n\n\n\n\n\n\nRestricting this comparison to humans avoids pooling species with very different typical heights. Keep only male and female characters with recorded heights; points show individual observations.\n\nsex_heights &lt;- subset(\n  starwars_data,\n  species == \"Human\" & sex %in% c(\"male\", \"female\") & !is.na(height)\n)\nsex_heights$sex &lt;- factor(sex_heights$sex, levels = c(\"female\", \"male\"))\n\nboxplot(\n  height ~ sex,\n  data = sex_heights,\n  outline = FALSE,\n  main = \"Human character height by sex\",\n  xlab = \"Sex\",\n  ylab = \"Height (cm)\",\n  col = c(\"mistyrose\", \"lightblue\")\n)\nstripchart(\n  height ~ sex,\n  data = sex_heights,\n  vertical = TRUE,\n  method = \"jitter\",\n  pch = 16,\n  col = adjustcolor(\"gray30\", alpha.f = 0.6),\n  add = TRUE\n)\n\n\n\n\n\n\n\n\n\n\n\nMass is shown on a logarithmic scale because the recorded values span a wide range. This plot includes characters with positive recorded height and mass.\n\nheight_mass &lt;- subset(\n  starwars_data,\n  !is.na(height) & !is.na(mass) & height &gt; 0 & mass &gt; 0\n)\nplot(\n  height_mass$height,\n  height_mass$mass,\n  log = \"y\",\n  pch = 19,\n  col = adjustcolor(\"steelblue\", alpha.f = 0.7),\n  main = \"Recorded height and body mass\",\n  xlab = \"Height (cm)\",\n  ylab = \"Mass (kg, log scale)\"\n)\n\n\n\n\n\n\n\n\n\n\n\nAs a final comparison, Welch’s two-sample t-test assesses whether the mean recorded heights differ between male and female human characters. It does not assume equal group variances. The groups are small and these characters are not a random sample, so treat the result as illustrative rather than evidence about a broader population.\n\nt.test(height ~ sex, data = sex_heights)\n\n\n    Welch Two Sample t-test\n\ndata:  height by sex\nt = -3.9259, df = 7.8079, p-value = 0.004597\nalternative hypothesis: true difference in means between group female and group male is not equal to 0\n95 percent confidence interval:\n -29.921948  -7.717803\nsample estimates:\nmean in group female   mean in group male \n            163.5714             182.3913"
+  },
+  {
+    "objectID": "projects/sample-project/index.html#a-quick-look-at-star-wars-characters",
+    "href": "projects/sample-project/index.html#a-quick-look-at-star-wars-characters",
+    "title": "Sample notebook analysis",
+    "section": "",
+    "text": "The Star Wars sample data is distributed by the dplyr project, but the analysis below uses only base R. The CSV is loaded directly from the project’s source; the results describe this selected set of characters, not a random sample of a larger population.\n\nstarwars_url &lt;- paste0(\n  \"https://raw.githubusercontent.com/tidyverse/dplyr/main/\",\n  \"data-raw/starwars.csv\"\n)\nstarwars_data &lt;- read.csv(url(starwars_url), stringsAsFactors = FALSE)\n\n\n\n\nobserved_heights &lt;- starwars_data$height[!is.na(starwars_data$height)]\nhist(\n  observed_heights,\n  breaks = seq(0, ceiling(max(observed_heights) / 10) * 10, by = 10),\n  main = \"Recorded heights of Star Wars characters\",\n  xlab = \"Height (cm)\",\n  ylab = \"Number of characters\",\n  col = \"lightblue\",\n  border = \"white\"\n)\n\n\n\n\n\n\n\n\n\n\n\nRestricting this comparison to humans avoids pooling species with very different typical heights. Keep only male and female characters with recorded heights; points show individual observations.\n\nsex_heights &lt;- subset(\n  starwars_data,\n  species == \"Human\" & sex %in% c(\"male\", \"female\") & !is.na(height)\n)\nsex_heights$sex &lt;- factor(sex_heights$sex, levels = c(\"female\", \"male\"))\n\nboxplot(\n  height ~ sex,\n  data = sex_heights,\n  outline = FALSE,\n  main = \"Human character height by sex\",\n  xlab = \"Sex\",\n  ylab = \"Height (cm)\",\n  col = c(\"mistyrose\", \"lightblue\")\n)\nstripchart(\n  height ~ sex,\n  data = sex_heights,\n  vertical = TRUE,\n  method = \"jitter\",\n  pch = 16,\n  col = adjustcolor(\"gray30\", alpha.f = 0.6),\n  add = TRUE\n)\n\n\n\n\n\n\n\n\n\n\n\nMass is shown on a logarithmic scale because the recorded values span a wide range. This plot includes characters with positive recorded height and mass.\n\nheight_mass &lt;- subset(\n  starwars_data,\n  !is.na(height) & !is.na(mass) & height &gt; 0 & mass &gt; 0\n)\nplot(\n  height_mass$height,\n  height_mass$mass,\n  log = \"y\",\n  pch = 19,\n  col = adjustcolor(\"steelblue\", alpha.f = 0.7),\n  main = \"Recorded height and body mass\",\n  xlab = \"Height (cm)\",\n  ylab = \"Mass (kg, log scale)\"\n)\n\n\n\n\n\n\n\n\n\n\n\nAs a final comparison, Welch’s two-sample t-test assesses whether the mean recorded heights differ between male and female human characters. It does not assume equal group variances. The groups are small and these characters are not a random sample, so treat the result as illustrative rather than evidence about a broader population.\n\nt.test(height ~ sex, data = sex_heights)\n\n\n    Welch Two Sample t-test\n\ndata:  height by sex\nt = -3.9259, df = 7.8079, p-value = 0.004597\nalternative hypothesis: true difference in means between group female and group male is not equal to 0\n95 percent confidence interval:\n -29.921948  -7.717803\nsample estimates:\nmean in group female   mean in group male \n            163.5714             182.3913"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ariana Gomez",
+    "section": "",
+    "text": "Hi! I’m Ariana, an undergraduate studying Geophysics at UCSB. I’m passionate about seismology, tectonics, and understanding the Earth’s mantle.\nRight now, I’m exploring anti-repeating earthquakes in the Californian Sierra Valley and building my skills in Python and Fortran. Outside the classroom, you can usually find me swimming at the Recreation Center.\nTake a look at my recent work on the Projects page, or feel free to reach out—I’d love to connect!"
+  }
+]
