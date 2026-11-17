@@ -1,0 +1,22 @@
+---
+title: "Your Name"
+image: media/headshot.png
+2toc: false
+about:
+    template: jolla
+    image-shape: round
+    image-width: 17em
+    links:
+        - text: LinkedIn
+          href: https://www.linkedin.com/
+        - text: GitHub
+          href: https://github.com/
+        - text: Email
+          href: mailto:email@ucsb.edu
+---
+
+Hi! I’m **[Your Name]**, an undergraduate studying **[Your Major]** at **[Your University]**. I’m passionate about **[Topic 1]**, **[Topic 2]**, and turning ideas into practical, well-designed projects.
+
+Right now, I’m exploring **[specific interest or current project]** and building my skills in **[tool, language, or method]**. Outside the classroom, you can usually find me **[hobby or campus activity, e.g., hiking, playing intramural sports, or trying new coffee shops]**.
+
+Take a look at my recent work on the **Projects** page, or feel free to reach out—I’d love to connect!

@@ -1,0 +1,17 @@
+---
+title: "About"
+subtitle: "A quick look at what I build, what I study, and what keeps me busy offline"
+title-block-banner: true
+---
+
+## The Work
+
+I am an urban planner and spatial analyst focused on making cities easier to walk, bike, and live in. My day-to-day involves mapping public transit gaps, analyzing pedestrian safety data, and translating dense municipal reports into clear, visual stories for local communities.
+
+![Map of the world, made by: L'Isle, Guillaume de, 1675-1726, cartographer. Available at: <http://hdl.loc.gov/loc.gmd/g3200.ct009328>](https://tile.loc.gov/image-services/iiif/service:gmd:gmd3:g3200:g3200:ct009328/full/pct:12.5/0/default.jpg){fig-alt="Map of the whole world : adorned according to the observations of the Royal Academy of Sciences and some others, according to the most recent annotations."}
+
+## The Side Quest
+
+When I step away from city maps, I spend most of my weekends restoring vintage mechanical typewriters. The hobby started by accident after I found a jammed 1960s portable model at a local thrift shop and decided to take it apart on my kitchen table.
+
+![Remington typewriter. Clas Ohlson museum in Insjön near Leksand in Dalarna. Available at: <https://commons.wikimedia.org/wiki/File:Remington_typewriter.JPG>](https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Remington_typewriter.JPG/960px-Remington_typewriter.JPG){fig-alt="Picture of the Remington typewriter described in the caption"}
